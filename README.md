@@ -26,8 +26,6 @@ wget -qO subht https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpres
 
 > Mariadb (Lastest)
 
-> Memcached (Lastest)
-
 > Cloudflare Full SSL
 
 Thank you

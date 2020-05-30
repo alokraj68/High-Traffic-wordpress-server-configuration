@@ -83,7 +83,7 @@ MYSQL_SCRIPT
 
 echo
 echo
-tput setaf 2; echo "Here is your Credentials"
+tput setaf 2; echo "Here are your Credentials"
 echo "--------------------------------"
 echo "Website:    https://www.$DOMAIN"
 echo
