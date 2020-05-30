@@ -7,13 +7,13 @@
 ### For first run
 
 ```sh
-wget --no-cache -O - https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/install.sh | bash
+wget -qO ht https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/install.sh && sudo bash ht
 ```
 
 ### For subdomains
 
 ```sh
-wget --no-cache -O - https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/sub-domain-install.sh | bash
+wget -qO subht https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/sub-domain-install.sh && sudo bash subht
 ```
 
 ## Features
