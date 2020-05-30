@@ -18,14 +18,6 @@ sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
 sudo mkdir -p /var/www/"$DOMAIN"/public
 cd /var/www/"$DOMAIN/public"
 cd ~
-tput setaf 2; echo "Downloading Latest Wordpress...."
-sleep 2;
-tput sgr0
-sudo wget -q wordpress.org/latest.zip
-sudo unzip latest.zip
-sudo mv wordpress/* /var/www/"$DOMAIN"/public/
-sudo rm -rf wordpress latest.zip
-cd ~
 sudo chown www-data:www-data -R /var/www/"$DOMAIN"/public
 sudo systemctl restart nginx.service
 
@@ -43,7 +35,6 @@ echo
 tput setaf 2; echo "Here is your Credentials"
 echo "--------------------------------"
 echo "Website:    https://$DOMAIN"
-echo "Dashboard:  https://$DOMAIN/wp-admin"
 echo
 tput setaf 4; echo "Database Name:   $USERNAME"
 tput setaf 4; echo "Database Username:   $USERNAME"
@@ -53,8 +44,4 @@ tput sgr0
 echo
 echo
 tput setaf 3;  echo "Installation & configuration succesfully finished."
-echo
-echo "Twitter @bajpangosh"
-echo "E-mail: support@kloudboy.com"
-echo "Bye! Your boy KLOUDBOY!"
 tput sgr0
