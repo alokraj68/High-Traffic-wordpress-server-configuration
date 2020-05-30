@@ -4,8 +4,16 @@
 
 ## Installation & Usage
 
+### For first run
+
 ```sh
-wget --no-cache -O - https://gist.githubusercontent.com/alokraj68/865ff6b08ffc930542f1675e679aba8f/raw/67f26c3cdbb0bf2d47c034ab78cc67df5d899a78/install-lamp.sh | bash
+wget --no-cache -O - https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/install.sh | bash
+```
+
+### For subdomains
+
+```sh
+wget --no-cache -O - https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/sub-domain-install.sh | bash
 ```
 
 ## Features
