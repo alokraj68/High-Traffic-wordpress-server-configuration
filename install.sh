@@ -19,16 +19,16 @@ tput setaf 2; echo "Sit back and relax :) ......"
 sleep 2;
 tput sgr0
 cd /etc/nginx/sites-available/
-sudo wget -qO "$DOMAIN" https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/sites-available/example.com.conf
+sudo wget -qO "$DOMAIN" https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/sites-available/example.com.conf
 sudo sed -i -e "s/example.com/$DOMAIN/" "$DOMAIN"
 sudo sed -i -e "s/www.example.com/www.$DOMAIN/" "$DOMAIN"
 sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
-sudo mkdir /etc/nginx/kloudboy
-cd /etc/nginx/kloudboy
-sudo wget -q https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/kloudboy/general.conf
-sudo wget -q https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/kloudboy/php_fastcgi.conf
-sudo wget -q https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/kloudboy/wordpress.conf
-sudo wget -q https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/kloudboy/security.conf
+sudo mkdir /etc/nginx/serverconfigs
+cd /etc/nginx/serverconfigs
+sudo wget -q https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/kloudboy/general.conf
+sudo wget -q https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/kloudboy/php_fastcgi.conf
+sudo wget -q https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/kloudboy/wordpress.conf
+sudo wget -q https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/kloudboy/security.conf
 tput setaf 2; echo "Setting up Cloudflare FULL SSL"
 sleep 2;
 tput sgr0
@@ -38,7 +38,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/
 sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 cd /etc/nginx/
 sudo mv nginx.conf nginx.conf.backup
-sudo wget -qO nginx.conf https://raw.githubusercontent.com/bajpangosh/High-Traffic-wordpress-server-configuration/master/nginx.conf
+sudo wget -qO nginx.conf https://raw.githubusercontent.com/alokraj68/High-Traffic-wordpress-server-configuration/non-wordpress/nginx.conf
 sudo mkdir -p /var/www/"$DOMAIN"/public
 cd /var/www/"$DOMAIN/public"
 cd ~
